@@ -1,4 +1,4 @@
-# LLM-Logic-Demos
+# LLM Logic Demos
 
 A collection of demonstrations exploring the synergy between Large Language Models (LLMs) and various formal logic and reasoning systems. This repository provides code examples to illustrate how to integrate LLMs with techniques like logic programming, knowledge graph traversal, and advanced reasoning frameworks to create more robust and explainable applications.
 
