@@ -1,49 +1,33 @@
-# --- Python ---
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pdb
-*.egg-info/
-*.egg
-*.log
+*.db
+*.sqlite
+.env
+.env.*
 
-# --- Virtual Environments ---
+# Virtual environments
 venv/
-.env/
 env/
+.langgraph-env/
 .venv/
 langgraph-env/
-langchain-env/
 
-# --- OS Artifacts ---
-.DS_Store
-Thumbs.db
+# LangChain / LangGraph
+*.json
+*.yaml
+*.yml
+checkpoints/
+state/
 
-# --- IDE files ---
-.vscode/
-.idea/
-
-# --- Jupyter ---
-.ipynb_checkpoints/
-
-# --- Cache / Build ---
-build/
-dist/
-.cache/
-*.sqlite3
-
-# --- LangChain / LangGraph ---
-rag_cache/
-vectorstore/
-*.jsonl.tmp
-
-# --- Prolog ---
+# Prolog temp
 *.swp
 *.bak
-*.tmp
 
-# --- Logs and Outputs ---
-logs/
-outputs/
-results/
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/

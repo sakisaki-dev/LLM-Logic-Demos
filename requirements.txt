@@ -1,0 +1,9 @@
+pyDatalog>=0.17.4
+pyswip>=0.2.10
+python-dotenv>=1.0.1
+openai>=1.11.0
+
+langchain>=0.2.0
+langgraph>=0.1.0
+langchain-community>=0.2.0
+
