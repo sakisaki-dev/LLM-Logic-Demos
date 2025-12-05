@@ -1,0 +1,49 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# --- Virtual Environments ---
+venv/
+.env/
+env/
+.venv/
+langgraph-env/
+langchain-env/
+
+# --- OS Artifacts ---
+.DS_Store
+Thumbs.db
+
+# --- IDE files ---
+.vscode/
+.idea/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Cache / Build ---
+build/
+dist/
+.cache/
+*.sqlite3
+
+# --- LangChain / LangGraph ---
+rag_cache/
+vectorstore/
+*.jsonl.tmp
+
+# --- Prolog ---
+*.swp
+*.bak
+*.tmp
+
+# --- Logs and Outputs ---
+logs/
+outputs/
+results/
