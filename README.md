@@ -2,7 +2,7 @@
 
 Small Python demos of symbolic reasoning (Prolog, Datalog, a hand-written backward chaining engine, and a LangGraph pipeline), plus one demo that uses an LLM to translate natural language into Prolog. The work explores how structured, rule-based logic can make question answering more explainable than prompting a model alone.
 
-All demos use a small family-tree knowledge base (parent, male, female facts with grandparent and ancestor rules).
+Each demo carries its own small family-tree knowledge base (parent facts plus grandparent or ancestor rules); the trees differ between demos.
 
 Built with Aman Avinash as lab deliverables for Prof. Gilpin's AIEA Lab at UC Santa Cruz.
 
