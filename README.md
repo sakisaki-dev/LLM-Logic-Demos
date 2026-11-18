@@ -29,29 +29,29 @@ The repository is organized into distinct folders, each containing a specific se
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/sakisaki-dev/LLM-Logic-Demos.git](https://github.com/sakisaki-dev/LLM-Logic-Demos.git)
-    cd LLM-Logic-Demos
-    ```
-
-2.  **Set up the environment:**
-    It is recommended to use a virtual environment:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
-
-3.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### Usage
-
-Navigate into any of the subdirectories and follow the instructions or run the Python scripts/Jupyter notebooks provided within. Each folder is a self-contained demonstration of a specific logic-LLM integration pattern.
-
-For example, to explore the Prolog demos:
 ```bash
-cd prolog
-python your_prolog_demo.py # (or run the Jupyter notebook)
+git clone https://github.com/sakisaki-dev/LLM-Logic-Demos.git
+cd LLM-Logic-Demos
+python -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### Running the demos
+
+Each folder is self-contained:
+
+| Demo | Run |
+| :--- | :--- |
+| Prolog knowledge base queried from Python | `python prolog/python_prolog_demo.py` |
+| Natural language → Prolog facts with an LLM | `python prolog/naturalLanguage_toprolog.py` |
+| Datalog querying | `python datalog/datalog.py` |
+| Backward chaining inference engine | `python "Backward Chaining Engine/backward_chaining.py"` |
+| Multi-step LLM agent with LangGraph | `python "LangChain and LangGraph/lang_graph.py"` |
+
+The LangGraph folder also includes a write-up of the agent design (PDF).
+
+---
+
+Built with Aman as part of UCSC's AIEA lab. Earlier course tasks are archived in separate repos
+([task4](https://github.com/sakisaki-dev/task4AIEA), [task6](https://github.com/sakisaki-dev/task6AIEA),
+[task7](https://github.com/sakisaki-dev/task7AIEA), [task9](https://github.com/sakisaki-dev/task9AIEA)).
