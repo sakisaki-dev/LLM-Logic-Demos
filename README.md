@@ -42,14 +42,13 @@ OPENAI_API_KEY=your-key-here
 | Demo | Command |
 | :--- | :--- |
 | Prolog KB queried from Python | `cd prolog && python python_prolog_demo.py` (must run from `prolog/` because it loads `kb.pl` by relative path) |
-| Natural language to Prolog | `python prolog/naturalLanguage_toprolog.py` (see Known issues) |
+| Natural language to Prolog | `python prolog/naturalLanguage_toprolog.py` (prompts for a sentence; exits with a message if `OPENAI_API_KEY` is not set) |
 | Datalog | `python datalog/datalog.py` |
 | Backward chaining | `python "Backward Chaining Engine/backward_chaining.py"` |
 | LangGraph pipeline | `python "LangChain and LangGraph/lang_graph.py"` |
 
 ## Known issues
 
-* `naturalLanguage_toprolog.py` defines `main()` but never calls it, so the script exits without doing anything. Add `if __name__ == "__main__": main()` at the end to run it.
 * The backward chaining engine keeps only the first solution of each subgoal and does not rename rule variables between recursive calls, so `ancestor(alice, Y)` returns only `bob` instead of `bob`, `charlie` and `david`.
 * In `lang_graph.py` the `judge` node sets a `relevant` flag, but the graph always continues to `refine`; there is no conditional edge that stops on irrelevant questions. Retrieval is keyword matching, and the answer comes from Python rule functions, not a model.
 * `langchain` and `langchain-community` are listed in `requirements.txt` but not imported by any demo.

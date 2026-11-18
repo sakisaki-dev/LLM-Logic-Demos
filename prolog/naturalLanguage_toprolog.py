@@ -1,11 +1,12 @@
 import os
+import re
+import sys
+
 from dotenv import load_dotenv
 from openai import OpenAI
-from pyswip import Prolog
-import re
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = None
 
 def natural_language_to_prolog(nl_input):
     prompt = f"""
@@ -40,12 +41,20 @@ def parse_prolog_code(prolog_text):
     return facts, rules, query
 
 def run_prolog(facts, rules, query):
+    from pyswip import Prolog  # needs SWI-Prolog installed
+
     prolog = Prolog()
     for f in facts + rules:
         prolog.assertz(f)
     return list(prolog.query(query))
 
 def main():
+    global client
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        sys.exit("OPENAI_API_KEY is not set. Add it to a .env file in the repo root or export it, then rerun.")
+    client = OpenAI(api_key=api_key)
+
     nl_input = input("Enter a natural language query:\n> ")
     prolog_text = natural_language_to_prolog(nl_input)
     print("\nGenerated Prolog:\n", prolog_text)
@@ -59,4 +68,5 @@ def main():
     print("\nQuery Results:", results)
 
 
-
+if __name__ == "__main__":
+    main()
