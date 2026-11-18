@@ -41,7 +41,7 @@ OPENAI_API_KEY=your-key-here
 
 | Demo | Command |
 | :--- | :--- |
-| Prolog KB queried from Python | `cd prolog && python python_prolog_demo.py` (must run from `prolog/` because it loads `kb.pl` by relative path) |
+| Prolog KB queried from Python | `python prolog/python_prolog_demo.py` |
 | Natural language to Prolog | `python prolog/naturalLanguage_toprolog.py` (prompts for a sentence; exits with a message if `OPENAI_API_KEY` is not set) |
 | Datalog | `python datalog/datalog.py` |
 | Backward chaining | `python "Backward Chaining Engine/backward_chaining.py"` |
